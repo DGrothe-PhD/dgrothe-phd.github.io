@@ -120,8 +120,8 @@ nav a:hover {
 
 main {
   padding: 1rem;
-  /*background-image: 
-    url('../assets/images/summer_background.jpg');*/
+  background-image: 
+    url('../assets/images/summer_background.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
