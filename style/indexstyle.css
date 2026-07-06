@@ -178,7 +178,7 @@ footer {
 .flex-parent {
   display: flex;
   padding: 20px;
-  margin-right: 3rem;
+  margin-inline: 1rem;
   gap: 2rem;
   flex-wrap: wrap;
 }
@@ -226,7 +226,7 @@ footer {
     flex: 0 0 100%;
     width: 100%;
   }
-
+  
   .thumbnail{
     max-width: 33vw;
     width: 100%;
