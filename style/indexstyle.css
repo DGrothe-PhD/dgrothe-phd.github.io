@@ -178,7 +178,7 @@ footer {
 .flex-parent {
   display: flex;
   padding: 20px;
-  margin-inline: 1rem;
+  margin-inline: clamp(20px, 0.5vw, 40px);
   gap: 2rem;
   flex-wrap: wrap;
 }
@@ -206,12 +206,6 @@ footer {
   background-image: 
     linear-gradient(rgba(255, 255, 255, 0), rgba(42, 42, 42, 0), rgba(42, 42, 42, 0.17));
 }
-
-/*@media (max-width: 768px) {
-  body {
-    font-size: 1.8em;
-  }
-}*/
 
 @media (orientation: portrait) {
   .flex-parent {
