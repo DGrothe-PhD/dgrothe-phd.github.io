@@ -178,7 +178,7 @@ footer {
 .flex-parent {
   display: flex;
   padding: 20px;
-  margin-inline: clamp(20px, 0.5vw, 40px);
+  margin-inline: 5px;
   gap: 2rem;
   flex-wrap: wrap;
 }
@@ -219,6 +219,10 @@ footer {
   .flex-child {
     flex: 0 0 100%;
     width: 100%;
+  }
+  
+  .flex-parent {
+    margin-inline: auto;
   }
   
   .thumbnail{
