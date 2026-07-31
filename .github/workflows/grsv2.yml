@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v5
       
       - name: Generate stats card (light)
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: stats
           path: profile/stats-light.svg
@@ -20,7 +20,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate stats card (dark)
-        uses: readme-tools/github-readme-stats-action@v1
+        uses: readme-tools/github-readme-stats-action@v2
         with:
           card: stats
           path: profile/stats-dark.svg
