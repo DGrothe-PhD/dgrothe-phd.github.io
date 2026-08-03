@@ -35,7 +35,7 @@ I'm from Germany. I am currently...
 - 🤔 I’m looking for help with ...
 - -->
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DGrothe-PhD&layout=donut&theme=solarized-dark)](https://github.com/anuraghazra/github-readme-stats) 
+[![Top Langs](https://github-stats-extended.vercel.app/api/top-langs/?username=DGrothe-PhD&layout=donut&theme=solarized-dark)](https://github.com/stats-organization/github-stats-extended) 
 
 also: Mathematica, LabView, Maple; SVN, TortoiseGit, &hellip;
 
