@@ -26,7 +26,7 @@ I'm from Germany. I am currently...
 - 👩‍💻 Other repos of mine 📝 [JavaWordChecker](https://github.com/DGrothe-PhD/WordCheckerJava) and 🐍 [Python Wordchecker](https://github.com/DGrothe-PhD/Wordchecker)
 
 ### More to find …
-[Github Page](https://dgrothe-phd.github.io/DGrothe-PhD/)
+[Github Page](https://dgrothe-phd.github.io/)
 
 ***
 
