@@ -1,8 +1,13 @@
 const toggleBtn = document.getElementById('theme-toggle');
 const sunIcon = document.getElementById('sun-icon');
 const moonIcon = document.getElementById('moon-icon');
+
+// Stats svg
+const topLangsLight = document.getElementById('top-langs-light');
+const topLangsDark = document.getElementById('top-langs-dark');
 const statsDark = document.getElementById('stats-dark');
 const statsLight = document.getElementById('stats-light');
+
 const body = document.body;
 const iframes = document.querySelectorAll('iframe');
 const header = document.body.querySelector('header');
@@ -51,6 +56,8 @@ if (toggleBtn) {
     if (header) header.classList.toggle('dark-mode');
     if (sunIcon) sunIcon.classList.toggle('hidden', isDark);
     if (moonIcon) moonIcon.classList.toggle('hidden', !isDark);
+    if (topLangsLight) topLangsLight.classList.toggle('hidden', isDark);
+    if (topLangsDark) topLangsDark.classList.toggle('hidden', !isDark);
     if (statsLight) statsLight.classList.toggle('hidden', isDark);
     if (statsDark) statsDark.classList.toggle('hidden', !isDark);
     if (themeStorage) {
