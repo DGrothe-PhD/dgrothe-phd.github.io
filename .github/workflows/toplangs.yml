@@ -1,0 +1,41 @@
+name: Update README cards
+
+on:
+  schedule:
+    - cron: "7 3 1 * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      
+      - name: Generate top-langs card (light)
+        uses: readme-tools/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          path: profile/top-langs-light.svg
+          options: username=${{ github.repository_owner }}&show_icons=true&bg_color=FEDB80
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate top-langs card (dark)
+        uses: readme-tools/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          path: profile/top-langs-dark.svg
+          options: username=${{ github.repository_owner }}&show_icons=true&theme=dark&bg_color=0d1117
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Make dark card background transparent
+        run: |
+          sed -i 's/fill="#0d1117"/fill="none"/g; s/fill="rgb(13,17,23)"/fill="none"/g' profile/top-langs-dark.svg
+
+      - name: Commit cards
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git pull
+          git add profile/top-langs*.svg
+          git commit -m "Update README cards" || exit 0
+          git push
