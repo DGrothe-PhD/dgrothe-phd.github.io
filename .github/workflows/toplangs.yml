@@ -16,7 +16,7 @@ jobs:
         with:
           card: top-langs
           path: profile/top-langs-light.svg
-          options: username=${{ github.repository_owner }}&show_icons=true&bg_color=FEDB80
+          options: username=${{ github.repository_owner }}&show_icons=true&layout=donut&bg_color=FEDB80
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate top-langs card (dark)
@@ -24,7 +24,7 @@ jobs:
         with:
           card: top-langs
           path: profile/top-langs-dark.svg
-          options: username=${{ github.repository_owner }}&show_icons=true&theme=dark&bg_color=0d1117
+          options: username=${{ github.repository_owner }}&show_icons=true&layout=donut&theme=dark&bg_color=0d1117
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Make dark card background transparent
