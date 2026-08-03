@@ -1,4 +1,4 @@
-name: Update README cards
+name: Update top-lang card
 
 on:
   schedule:
