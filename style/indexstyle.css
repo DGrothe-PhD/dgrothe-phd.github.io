@@ -181,6 +181,15 @@ iframe body {
   height:100%;
 }
 
+.overlay span {
+  position:absolute;
+  top:30px;
+  right:50px;
+  font-size:2em;
+  color:white;
+  cursor:pointer;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
