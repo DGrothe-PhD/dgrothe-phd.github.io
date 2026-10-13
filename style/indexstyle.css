@@ -1,7 +1,9 @@
 :root {
+  --darkmodegreentext: #72ae32;
+  --darkmodebackground: rgba(11, 11, 15, 0.72);
   --accent: #e63e22;
-  --bg: #fafafa;
-  --fg: #197b24;
+  --lightmodegreentext: #237717;
+  --lightmodebackground: rgba(255, 225, 225, 0.42);
   --link: #e65e12;
   --border: #ddd;
 }
@@ -18,8 +20,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #121212;
-    --fg: #72ae32;
+    --link: Tomato;
+    --border: #333;
+  }
+  
+  body {
+    color: var(--darkmodegreentext);
+    background-color: var(--darkmodebackground);
     --link: Tomato;
     --border: #333;
   }
@@ -28,17 +35,16 @@
 body {
   font-family: system-ui, sans-serif;
   margin: 0;
-  /*padding: 0.5rem;*/
-  background: var(--bg);
-  color: var(--fg);
+  background-color: var(--lightmodebackground);
+  color: var(--lightmodegreentext);
   line-height: 1.6;
   transition: background-color 0.3s, color 0.3s;
   overflow-x: hidden; /* verhindert horizontales Scrollen */
 }
 
 body.dark-mode {
-  --bg: #121212;
-  --fg: #72ae32;
+  color: var(--darkmodegreentext);
+  background-color: var(--darkmodebackground);
   --link: Tomato;
   --border: #333;
 }
@@ -145,9 +151,9 @@ iframe {
   background-color: transparent;
   width: 100%;
   height: 80vh;
-  padding: 0.5rem;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  margin-top: 0;
+  padding: 0 0.2rem 0 0.2rem;
+  border: none;
 }
 
 iframe body {

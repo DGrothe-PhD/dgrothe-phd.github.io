@@ -1,7 +1,9 @@
 :root {
   --darkmodegreentext: #72ae32;
+  --darkmodebackground: rgba(11, 11, 15, 0.12);
   --accent: #e63e22;
-  --fg: #197b24;
+  --lightmodegreentext: #237717;
+  --lightmodebackground: rgba(255, 225, 225, 0.42);
   --link: #e65e12;
   --hint: rgba(97, 42, 42, 0.17);
   --border: #ddd;
@@ -14,28 +16,48 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  color: var(--lightmodegreentext);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+	/*overflow: hidden;*/
+}
+
+.page {
+  background-color: var(--lightmodebackground);
+  border: 2px solid #888;
+  border-radius: 8px;
+  margin-top: 0;
+  margin-right: 10px;
+  padding: 0 5px 0 5px;
+  overflow: hidden;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --fg: var(--darkmodegreentext);
+    color: var(--darkmodegreentext);
     --hint: rgba(150, 120, 120, 0.3);
+    --link: Tomato;
+    --border: #333;
+  }
+  body {
+    color: var(--darkmodegreentext);
+    /*background-color: var(--darkmodebackground);*/
     --link: Tomato;
     --border: #333;
   }
 }
 
-body {
-  font-family: system-ui, sans-serif;
-  margin: 0;
-  background: var(--bg);
-  color: var(--fg);
-  line-height: 1.6;
-  transition: background-color 0.3s, color 0.3s;
-}
-
 body.dark-mode {
-  --fg: var(--darkmodegreentext);
+  color: var(--darkmodegreentext);
   --link: Tomato;
   --border: #333;
+}
+
+body.dark-mode .page {
+  background-color: var(--darkmodebackground);
 }
 
 html.dark-mode {
@@ -133,8 +155,7 @@ a {
   padding: 0px 2px 0px 2px;
   border-radius: 5px;
   width: 100%;
-  color: var(--fg);
-  background-color: rgba(94, 94, 18, 0.3);
+  color: var(--lightmodegreentext);
   overflow: hidden;
 }
 .panel ul{
@@ -142,6 +163,17 @@ a {
 }
 .panel ul li{
   padding: 0.2em;
+  background-color: rgba(255, 255, 255, 0.17);
+}
+
+.demo {
+  padding-inline: 10px;
+  border: 2px solid #888;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: goldenrod;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05), rgba(42, 42, 42, 0), rgba(42, 42, 42, 0.17));
 }
 
 
