@@ -41,16 +41,17 @@
   <div class="card flex-child">
   <h2><a href="https://danielagrothe.substack.com">📚 My Substack</a></h2>
     <iframe src="Substack.html" 
-      name="Substack – Highlights">
+        name="Substack – Highlights">
     </iframe>
-    </div>
+  </div>
   <div class="card flex-child">
+    <h2><a name="AboutMe">About Me</a></h2>
     <iframe src="AboutMe.html" 
       name="About Me – Highlights">
     </iframe>
   </div>
   <div class="card flex-child">
-    <h3><a name="Statistics">GitHub Stats</a></h3>
+    <h2><a name="Statistics">GitHub Stats</a></h2>
     <img id="top-langs-light" src="./profile/top-langs-light.svg" width="100%" alt="GitHub: Top coding languages"/>
     <img id="top-langs-dark" src="./profile/top-langs-dark.svg" class="hidden" width="100%" alt="GitHub: Top coding languages"/>
     <img id="stats-light" src="./profile/stats-light.svg" width="100%" alt="GitHub Stats"/>
@@ -64,7 +65,8 @@
 
   <!-- Full screen cinema here -->
   <div class="overlay" id="mastermindLightbox">
-  <span id="mastermind-close" style="position:absolute;top:30px;right:50px;font-size:2em;color:white;cursor:pointer;" onClick="hideMasterMindVideo();">&times;</span>
+  <span id="mastermind-close" aria-label="Schließen, Close" 
+  style="position:absolute;top:30px;right:50px;font-size:2em;color:white;cursor:pointer;" onClick="hideMasterMindVideo();">&times;</span>
     <video id="MastermindDemo" preload="none" 
       style="box-shadow:0 0 12px #fff;border-radius:8px"
       controls>

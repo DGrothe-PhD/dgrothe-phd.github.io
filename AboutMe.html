@@ -6,7 +6,8 @@
   <title>About Me</title>
   <link rel="stylesheet" href="./style/aboutMeStyle.css">
 </head>
-    <h3><a name="AboutMe">About Me</a></h3>
+<body>
+  <div class="page">
     <p>Software developer actively contributing to apps which make life better. From a person asking questions, it's now my habit to go self-onboarding on large codebases. See what I've done so far below (and still remember ;)</p>
     <details class="accordion" name="showmore"><summary>How I came here</summary>
     <div class="panel">
@@ -18,7 +19,8 @@
     <ul>
       <li><a target="_blank" href="https://dgrothe-phd.github.io/foodQuery/">Food Query</a> Website (HTML/JS)</li>
       <li><a target="_blank" href="https://github.com/DGrothe-PhD/punktspiel">Punktspiel</a> Flutter mobile app</li>
-      <li><a target="_blank" href="https://github.com/DGrothe-PhD/Mastermind">Mastermind</a> <span style="color:maroon" onClick="parent.showMasterMindVideo();">Demo</span>
+      <li><a target="_blank" href="https://github.com/DGrothe-PhD/Mastermind">Mastermind</a> 
+         <button class="demo" type="button" tabindex="0" aria-label="Mastermind game demo video" style="color:maroon" onClick="parent.showMasterMindVideo();">Demo</button>
       cardboard experience wordle game</li>
     </ul>
     </div>
@@ -31,4 +33,7 @@
     <ul>
     </div>
     </details>
+  </div>
 <script src="./theme-toggle.js"></script>
+</body>
+</html>
