@@ -53,19 +53,29 @@ header {
   /*background: var(--accent);*/
   color: #222;
   padding: 0.75rem 1rem;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  background-color: rgba(187, 42, 0, 0);
   background-image: 
     linear-gradient(rgba(187, 42, 0, 0), rgba(187, 42, 0, 0.17)),
     url('../assets/images/wood.png');
   background-size: cover;
   background-position: center;
+  
+  img {
+    border-radius: 50%;
+    border: 3px solid var(--darkmodegreentext);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.70);
+  }
 }
 
 header.dark-mode {
   color: white;
+  background-color: rgba(187, 42, 0, 0.5);
   background-image: 
     linear-gradient(rgba(187, 42, 0, 0), rgba(187, 42, 0, 0.17)),
     url('../assets/images/wood.png');
