@@ -3,8 +3,37 @@ const mastermindLightbox = document.getElementById('mastermindLightbox');
 const mastermindClose = document.getElementById('mastermind-close');
 //initialize
 
+function playPauseVideo(vid) {
+  if (vid.paused){
+  vid.play(); 
+  }
+  else { 
+  vid.pause(); 
+  }
+}
+
+mastermindLightbox.onkeydown = function(e){
+  switch(e.key){
+    case " ":
+      // stops default behaviour of space bar. Stop page scrolling down
+      e.preventDefault();
+      playPauseVideo(mastermindDemo);
+      break;
+    case "Escape":
+      hideMasterMindVideo();
+      break;
+    case "M"://fallback intended.
+    case "m":
+      mastermindDemo.muted = !(mastermindDemo.muted);
+      break;
+    default:
+      return;
+  }
+}
+
 function showMasterMindVideo(){
   mastermindLightbox.style.display = 'block';
+  mastermindLightbox.focus();
 }
 
 function hideMasterMindVideo(){
