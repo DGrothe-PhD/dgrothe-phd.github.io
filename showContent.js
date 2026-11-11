@@ -22,6 +22,11 @@ mastermindLightbox.onkeydown = function(e){
     case "Escape":
       hideMasterMindVideo();
       break;
+    case "Home":
+      event.preventDefault();
+      video.currentTime = 0;
+      video.play();
+      break;
     case "M"://fallback intended.
     case "m":
       mastermindDemo.muted = !(mastermindDemo.muted);
