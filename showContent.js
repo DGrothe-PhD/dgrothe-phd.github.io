@@ -24,8 +24,8 @@ mastermindLightbox.onkeydown = function(e){
       break;
     case "Home":
       event.preventDefault();
-      video.currentTime = 0;
-      video.play();
+      mastermindDemo.currentTime = 0;
+      mastermindDemo.play();
       break;
     case "M"://fallback intended.
     case "m":
