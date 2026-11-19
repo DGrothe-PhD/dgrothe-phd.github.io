@@ -31,6 +31,20 @@ mastermindLightbox.onkeydown = function(e){
     case "m":
       mastermindDemo.muted = !(mastermindDemo.muted);
       break;
+    case "J":
+    case "j":
+    case "ArrowLeft":
+      if(mastermindDemo.currentTime > 11){
+        mastermindDemo.currentTime -= 8;
+      }
+      break;
+    case "L":
+    case "l":
+    case "ArrowRight":
+      if(mastermindDemo.duration - mastermindDemo.currentTime > 11){
+        mastermindDemo.currentTime += 8;
+      }
+      break;
     default:
       return;
   }

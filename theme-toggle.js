@@ -39,12 +39,12 @@ function sendThemeToAllIframes() {
   document.querySelectorAll('iframe').forEach(f => sendThemeTo(f.contentWindow));
 }
 
-// 1. Startzustand aus dem Speicher (vermeidet Aufblitzen, gilt für beide Seiten)
+// Startzustand aus dem Speicher (vermeidet Aufblitzen, gilt für beide Seiten)
 try {
   if (themeStorage && themeStorage.getItem('theme') === 'dark') applyTheme(true);
 } catch (e) {}
 
-// 2. Elternfenster: Theme an jeden iframe schicken, sobald er geladen ist
+// msg every iframe
 document.querySelectorAll('iframe').forEach(f => {
   f.addEventListener('load', () => sendThemeTo(f.contentWindow));
 });
